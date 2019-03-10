@@ -1,0 +1,23 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.5/phpunit.xsd"
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        bootstrap="config/bootstrap.php"
+        >
+
+    <php>
+        <server name="KERNEL_CLASS" value="App\Kernel" />
+        <env name="APP_ENV" value="test" />
+        <env name="DATABASE_URL" value="mysql://root:@127.0.0.1:3306/test2_testing" />
+    </php>
+
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory>tests</directory>
+            <!--<file>/path/to/MyTest.php</file>-->
+            <!--<exclude>/path/to/exclude</exclude>-->
+        </testsuite>
+    </testsuites>
+
+</phpunit>
